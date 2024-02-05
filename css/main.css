@@ -69,23 +69,22 @@ i {
 
 
 .container {
-  max-width: 1100px;
+  max-width: 1200px;
   height: 80vh;
-  width: 85%;
   margin: 20px auto;
 }
 
-.colonna {
-  height: 770px;
+.colonna.left,
+.colonna.right {
+  height: 80vh;
 }
 
 .colonna.left {
-  height: calc(100% - 190px);
   width: 30%;
 }
 
 .colonna.right {
-  height: calc(100% - 140px);
+  width: 70%;
 }
 
 img {
@@ -94,10 +93,7 @@ img {
   border-radius: 50%;
 }
 
-.colonna.right {
-  width: 70%;
-  height: 100%;
-}
+
 
 .colonna .top,
 .colonna .bottom,
@@ -126,6 +122,10 @@ img {
   border: 1px solid rgb(194, 194, 194);
   background-color: white;
   width: 100%;
+}
+
+.colonna.left .top {
+  border-right: 1px solid rgb(194, 194, 194);
 }
 
 span {
@@ -173,12 +173,12 @@ span {
   font-weight: bold;
 }
 
-.person {
+.colonna.left .center {
   overflow: scroll;
-  max-height: 850px;
+  max-height: calc(100% - 190px);
 }
 
-.person span {
+.left .center span {
   color: rgb(182, 185, 187);
   font-size: 12px;
   font-weight: bold;
@@ -191,7 +191,7 @@ span {
   background-image: url(../img/mine.jpg);
   background-size: contain;
   overflow: scroll;
-  max-height: 850px;
+  max-height: calc(100% - 140px);
 }
 
 .right span {
@@ -242,6 +242,7 @@ span {
   width: 84%;
   height: 50px;
   border: none;
+  border-radius: 8px;
 }
 
 
@@ -250,4 +251,81 @@ span {
   width: 8%;
   height: 50px;
   padding-top: 15px;
+}
+
+
+/* RESPONSIVE */
+
+/* TABLET */
+
+@media screen and (max-width: 992px){
+  .container {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .colonna.left,
+  .colonna.right {
+    height: 100vh;
+  }
+
+  .colonna.left {
+    width: 12%;
+  }
+
+  .colonna.right {
+    width: 88%;
+  }
+
+  .colonna.left .top .dx,
+  .colonna.left .top.special,
+  .colonna.left .top.small,
+  .colonna.left .center .single .prew,
+  .colonna.left .center .single .dx {
+    display: none;
+  }
+
+  .colonna.left .center {
+    max-height: calc(100% - 70px);
+  }
+
+  .colonna.right .center {
+    max-height: calc(100% - 140px);
+  }
+
+  .colonna.right .center .sms {
+    margin: 25px 50px;
+  }
+
+  .colonna.right .center .chat {
+    width: 80%;
+  }
+  
+}
+
+/* MOBILE */
+@media screen and (max-width: 542px) {
+
+  .container .row .colonna.right {
+    width: 100%;
+  }
+  .container .row .colonna.left,
+  .container .row .colonna.right .top .dx,
+  .container .row .colonna.right .bottom .none{
+    display: none;
+  }
+
+  .colonna.right .center .sms {
+    margin: 25px 30px;
+  }
+
+  .colonna.right .center .chat {
+    width: 90%;
+  }
+
+  .container .row .colonna.right .bottom .scrivi {
+    width: 95%;
+  }
+
 }
