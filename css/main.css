@@ -7,7 +7,7 @@
 body {
   font-family: 'Lato', sans-serif;
   background-color: rgb(0, 150, 136);
-  height: 50px;
+  height: 100vh;
 }
 
 /* UTILITY */
@@ -54,14 +54,14 @@ body {
 
 i {
   font-size: 1.2rem;
-  color: rgb(107, 115, 118);
+  color: rgb(154, 154, 154);
 }
 
 
 .container {
   max-width: 1100px;
-  height: 90%;
-  width: 80%;
+  height: 80vh;
+  width: 85%;
   margin: 20px auto;
 }
 
@@ -71,6 +71,7 @@ i {
 
 .colonna.left {
   width: 30%;
+  height: 100%;
 }
 
 img {
@@ -81,6 +82,7 @@ img {
 
 .colonna.right {
   width: 70%;
+  height: 100%;
 }
 
 .colonna .top,
@@ -96,7 +98,7 @@ img {
 
 .top.small{
   height: 50px;
-  padding: 7px 10px;
+  padding: 8px;
 }
 
 .top.special {
@@ -113,7 +115,7 @@ img {
 }
 
 span {
-  color: rgb(194, 194, 194);
+  color: rgb(154, 154, 154);
 }
 
 .serch {
@@ -122,18 +124,15 @@ span {
 
 .cerca {
   width: 100%;
-  height: 30px;
+  height: 35px;
   border: none;
-  /* float: left; */
 }
 
 .fa-magnifying-glass {
   padding-top: 5px;
+  padding-left: 10px;
 }
 
-/* .cerca::before {
-  list-style-type: '/f002';
-} */
 
 /* top-blu */
 .cerchio {
@@ -160,6 +159,11 @@ span {
   font-weight: bold;
 }
 
+.person {
+  overflow: scroll;
+  max-height: 850px;
+}
+
 .person span {
   color: rgb(182, 185, 187);
   font-size: 12px;
@@ -171,7 +175,9 @@ span {
 /* COLONNA DX */
 .colonna.right .center {
   background-image: url(../img/mine.jpg);
-  background-size: cover;
+  background-size: contain;
+  overflow: scroll;
+  max-height: 850px;
 }
 
 .right span {
@@ -182,7 +188,6 @@ span {
 
 .sms {
   margin: 50px 100px;
-  /* overflow: scroll; */
 }
 
 .chat {
@@ -192,13 +197,20 @@ span {
   border-radius: 20px;
   padding: 20px;
   margin-bottom: 10px;
-  
 }
 
 .chat.send {
   background-color: rgb(213, 249, 186);
   align-self: flex-end;
 }
+
+.chat-dx .fa-chevron-down {
+  font-size: 12px;
+}
+
+/* .chat-dx .c {
+  font-size: 12px;
+} */
 
 .chat.receive {
   align-self: flex-start;
@@ -208,12 +220,21 @@ span {
   padding-top: 11px;
 }
 
+.bottom .srivi-mess {
+  width: 770px;
+  height: 50px;
+}
+
 .bottom .scrivi {
   width: 84%;
   height: 50px;
+  border: none;
 }
+
+
 
 .bottom i {
   width: 8%;
   height: 50px;
+  padding-top: 15px;
 }
