@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: rgb(0, 150, 136);
+  height: 50px;
+}
+
+/* UTILITY */
+
+.debug {
+  border: 1px solid black;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.a-center {
+   align-items: center;
+}
+
+.d-center {
+  justify-content: center;
+}
+
+
+.container {
+  max-width: 1300px;
+  height: 90%;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.colonna {
+  height: 770px;
+}
+
+.colonna.left {
+  max-width: 30%;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* .colonna .right {
+  max-width: 70%;
+} */
+
+.colonna .top,
+.colonna .bottom,
+.colonna .top.small {
+  background-color: rgb(234, 234, 234);
+}
+
+.top,
+.bottom{
+  height: 70px;
+}
+
+.top.small{
+  height: 50px;
+}
+
+.top.special {
+  background-color: rgb(142, 218, 252);
+}
+
+
+
+/* COLONNA DX */
+.colonna.right .center {
+  background-image: url(../img/mine.jpg);
+  background-size: cover;
+}
+
+
