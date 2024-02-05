@@ -36,9 +36,21 @@ body {
   justify-content: center;
 }
 
+.padding {
+  padding: 20px 15px;
+}
+
+.padding-right {
+  padding-right: 20px;
+}
+
+.margin-left {
+  margin-left: 20px;
+}
+
 
 .container {
-  max-width: 1300px;
+  max-width: 1100px;
   height: 90%;
   width: 80%;
   margin: 20px auto;
@@ -49,7 +61,7 @@ body {
 }
 
 .colonna.left {
-  max-width: 30%;
+  width: 30%;
 }
 
 img {
@@ -58,9 +70,9 @@ img {
   border-radius: 50%;
 }
 
-/* .colonna .right {
-  max-width: 70%;
-} */
+.colonna.right {
+  width: 70%;
+}
 
 .colonna .top,
 .colonna .bottom,
@@ -82,6 +94,51 @@ img {
 }
 
 
+/* COLONNA SX */
+.single {
+  height: 80px;
+  border: 1px solid rgb(194, 194, 194);
+  background-color: white;
+  width: 100%;
+}
+
+span {
+  color: rgb(194, 194, 194);
+}
+
+
+/* top-blu */
+.cerchio {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.fa-bell-slash {
+  color: rgb(142, 218, 252);
+  font-size: 1.2rem;
+}
+
+.special a {
+  color: rgb(81, 121, 138);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* centro - colonna sx */
+.lista-contatti span {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.person span {
+  color: rgb(182, 185, 187);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
 
 /* COLONNA DX */
 .colonna.right .center {
@@ -89,4 +146,27 @@ img {
   background-size: cover;
 }
 
+.sms {
+  margin-top: 50px;
+  /* overflow: scroll; */
+}
+
+.chat {
+  background-color: white;
+  width: 60%;
+  height: 30%;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 10px;
+  
+}
+
+.chat.send {
+  background-color: rgb(213, 249, 186);
+  align-self: flex-end;
+}
+
+.chat.receive {
+  align-self: flex-start;
+}
 
