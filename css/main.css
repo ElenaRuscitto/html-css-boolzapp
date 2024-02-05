@@ -6,9 +6,11 @@
 
 body {
   font-family: 'Lato', sans-serif;
-  background-color: rgb(0, 150, 136);
   height: 100vh;
+  background: linear-gradient(to bottom, #009688 0%,#009688 15%, #DADBD4 15%, #DADBD4 85%);
+  background-repeat: no-repeat;
 }
+
 
 /* UTILITY */
 
@@ -34,6 +36,14 @@ body {
 
 .d-center {
   justify-content: center;
+}
+
+.flex-end {
+  align-self: flex-end;
+}
+
+.j-flex-end {
+  justify-content: flex-end;
 }
 
 .padding {
@@ -70,8 +80,12 @@ i {
 }
 
 .colonna.left {
+  height: calc(100% - 190px);
   width: 30%;
-  height: 100%;
+}
+
+.colonna.right {
+  height: calc(100% - 140px);
 }
 
 img {
@@ -206,11 +220,10 @@ span {
 
 .chat-dx .fa-chevron-down {
   font-size: 12px;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 40px;
 }
-
-/* .chat-dx .c {
-  font-size: 12px;
-} */
 
 .chat.receive {
   align-self: flex-start;
