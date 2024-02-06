@@ -7,8 +7,11 @@
 body {
   font-family: 'Lato', sans-serif;
   height: 100vh;
-  background: linear-gradient(to bottom, #009688 0%,#009688 15%, #DADBD4 15%, #DADBD4 85%);
-  background-repeat: no-repeat;
+  background: linear-gradient(to bottom, 
+  #009688 0%,
+  #009688 18%, 
+  #DADBD4 18%, 
+  #DADBD4 100%);
 }
 
 
@@ -76,7 +79,7 @@ i {
 
 .colonna.left,
 .colonna.right {
-  height: 80vh;
+  height: 95vh;
 }
 
 .colonna.left {
@@ -143,7 +146,7 @@ span {
 }
 
 .fa-magnifying-glass {
-  padding-top: 5px;
+  padding-top: 7px;
   padding-left: 10px;
 }
 
@@ -175,7 +178,7 @@ span {
 
 .colonna.left .center {
   overflow: scroll;
-  max-height: calc(100% - 190px);
+  max-height: calc(100% - 189px);
 }
 
 .left .center span {
@@ -200,11 +203,11 @@ span {
   color: rgb(135, 141, 143);
 }
 
-.sms {
+.chat {
   margin: 50px 100px;
 }
 
-.chat {
+.sms {
   background-color: white;
   width: 60%;
   height: 30%;
@@ -213,19 +216,19 @@ span {
   margin-bottom: 10px;
 }
 
-.chat.send {
+.sms.send {
   background-color: rgb(213, 249, 186);
   align-self: flex-end;
 }
 
-.chat-dx .fa-chevron-down {
+.sms-dx .fa-chevron-down {
   font-size: 12px;
   display: flex;
   justify-content: flex-end;
   margin-left: 40px;
 }
 
-.chat.receive {
+.sms.receive {
   align-self: flex-start;
 }
 
@@ -294,11 +297,11 @@ span {
     max-height: calc(100% - 140px);
   }
 
-  .colonna.right .center .sms {
+  .colonna.right .center .chat{
     margin: 25px 50px;
   }
 
-  .colonna.right .center .chat {
+  .colonna.right .center .sms {
     width: 80%;
   }
   
@@ -316,11 +319,11 @@ span {
     display: none;
   }
 
-  .colonna.right .center .sms {
+  .colonna.right .center .chat{
     margin: 25px 30px;
   }
 
-  .colonna.right .center .chat {
+  .colonna.right .center .sms {
     width: 90%;
   }
 
