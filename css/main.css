@@ -12,6 +12,7 @@ body {
   #009688 18%, 
   #DADBD4 18%, 
   #DADBD4 100%);
+  background-repeat: no-repeat;
 }
 
 
@@ -77,16 +78,15 @@ i {
   margin: 20px auto;
 }
 
-.colonna.left,
-.colonna.right {
-  height: 95vh;
+.row {
+  height: 100%;
 }
 
-.colonna.left {
+.col.left {
   width: 30%;
 }
 
-.colonna.right {
+.col.right {
   width: 70%;
 }
 
@@ -98,9 +98,9 @@ img {
 
 
 
-.colonna .top,
-.colonna .bottom,
-.colonna .top.small {
+.col .top,
+.col .bottom,
+.col .top.small {
   background-color: rgb(234, 234, 234);
 }
 
@@ -127,7 +127,7 @@ img {
   width: 100%;
 }
 
-.colonna.left .top {
+.col.left .top {
   border-right: 1px solid rgb(194, 194, 194);
 }
 
@@ -176,9 +176,9 @@ span {
   font-weight: bold;
 }
 
-.colonna.left .center {
+.col.left .center {
   overflow: scroll;
-  max-height: calc(100% - 189px);
+  height: calc(100% - 190px);
 }
 
 .left .center span {
@@ -187,10 +187,13 @@ span {
   font-weight: bold;
 }
 
+.center .single .orario {
+  padding-left: 60px;
+}
 
 
 /* COLONNA DX */
-.colonna.right .center {
+.col.right .center {
   background-image: url(../img/mine.jpg);
   background-size: contain;
   overflow: scroll;
@@ -309,6 +312,19 @@ span {
   border-radius: 8px;
 }
 
+.sms .sms-orario {
+  font-size: .6rem;
+}
+
+.sms-dx {
+  position: relative;
+}
+
+.sms.send .sms-orario,
+.sms.receive .sms-orario {
+  position: absolute;
+  right: .2px;
+}
 
 
 .bottom i {
@@ -329,40 +345,40 @@ span {
     width: 100vw;
   }
 
-  .colonna.left,
-  .colonna.right {
+  .col.left,
+  .col.right {
     height: 100vh;
   }
 
-  .colonna.left {
+  .col.left {
     width: 12%;
   }
 
-  .colonna.right {
+  .col.right {
     width: 88%;
   }
 
-  .colonna.left .top .dx,
-  .colonna.left .top.special,
-  .colonna.left .top.small,
-  .colonna.left .center .single .prew,
-  .colonna.left .center .single .dx {
+  .col.left .top .dx,
+  .col.left .top.special,
+  .col.left .top.small,
+  .col.left .center .single .prew,
+  .col.left .center .single .dx {
     display: none;
   }
 
-  .colonna.left .center {
-    max-height: calc(100% - 70px);
+  .col.left .center {
+    height: calc(100% - 70px);
   }
 
-  .colonna.right .center {
+  .col.right .center {
     height: calc(100% - 140px);
   }
 
-  .colonna.right .center .chat{
+  .col.right .center .chat{
     margin: 25px 50px;
   }
 
-  .colonna.right .center .sms {
+  .col.right .center .sms {
     width: 80%;
   }
   
@@ -371,24 +387,24 @@ span {
 /* MOBILE */
 @media screen and (max-width: 542px) {
 
-  .container .row .colonna.right {
+  .container .row .col.right {
     width: 100%;
   }
-  .container .row .colonna.left,
-  .container .row .colonna.right .top .dx,
-  .container .row .colonna.right .bottom .none{
+  .container .row .col.left,
+  .container .row .col.right .top .dx,
+  .container .row .col.right .bottom .none{
     display: none;
   }
 
-  .colonna.right .center .chat{
+  .col.right .center .chat{
     margin: 25px 30px;
   }
 
-  .colonna.right .center .sms {
+  .col.right .center .sms {
     width: 90%;
   }
 
-  .container .row .colonna.right .bottom .scrivi {
+  .container .row .col.right .bottom .scrivi {
     width: 95%;
   }
 
