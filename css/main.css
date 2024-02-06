@@ -194,7 +194,7 @@ span {
   background-image: url(../img/mine.jpg);
   background-size: contain;
   overflow: scroll;
-  max-height: calc(100% - 140px);
+  height: calc(100% - 140px);
 }
 
 .right span {
@@ -355,7 +355,7 @@ span {
   }
 
   .colonna.right .center {
-    max-height: calc(100% - 140px);
+    height: calc(100% - 140px);
   }
 
   .colonna.right .center .chat{
