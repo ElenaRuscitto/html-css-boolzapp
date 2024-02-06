@@ -228,6 +228,32 @@ span {
   margin-left: 40px;
 }
 
+/* menu info sms */
+.sms-dx .fa-chevron-down:hover {
+  color:rgb(72, 74, 74);
+}
+
+#chevron-active ul {
+  list-style: none;
+}
+
+.specifica-sms {
+  /* display: none; */
+  background-color: white;
+  font-size: .7rem;
+  text-decoration: none;
+  color: black;
+  padding:5px 60px;
+
+}
+
+.fa-chevron-down:hover .specifica-sms {
+  display: inline-block;
+}
+
+
+/* /menu info sms */
+
 .sms.receive {
   align-self: flex-start;
 }
