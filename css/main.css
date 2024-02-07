@@ -1,3 +1,20 @@
+:root {
+  --text-color-w: white;
+  --text-color-b: black;
+  --text-color-c: rgb(142, 218, 252);
+  --text-color-llg: rgb(185, 187, 190);
+  --text-color-lg: rgb(177, 177, 177);
+  --text-color-g: rgb(104, 113, 116);
+  --text-color-gs: rgb(107, 115, 118);
+  --text-color-bg: rgb(79, 117, 133);
+  --bg-color-w: white;
+  --bg-color-c: rgb(142, 218, 252);
+  --bg-color-lg: rgb(234, 234, 234);
+  --bg-color-v: rgb(213, 249, 186);
+  --bg-color-dropdown: #f1f1f1;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -68,7 +85,7 @@ body {
 
 i {
   font-size: 1.2rem;
-  color: rgb(154, 154, 154);
+  color: var(--text-color-lg);
 }
 
 
@@ -101,7 +118,7 @@ img {
 .col .top,
 .col .bottom,
 .col .top.small {
-  background-color: rgb(234, 234, 234);
+  background: var(--bg-color-lg);
 }
 
 .top,
@@ -115,7 +132,7 @@ img {
 }
 
 .top.special {
-  background-color: rgb(142, 218, 252);
+  background: var(--bg-color-c);
 }
 
 
@@ -123,7 +140,7 @@ img {
 .single {
   height: 80px;
   border: 1px solid rgb(194, 194, 194);
-  background-color: white;
+  background: var(--bg-color-w);
   width: 100%;
 }
 
@@ -131,23 +148,21 @@ img {
   border-right: 1px solid rgb(194, 194, 194);
 }
 
-span {
-  color: rgb(154, 154, 154);
-}
-
 .serch {
-  background-color: white;
+  background: var(--bg-color-w);
 }
 
 .cerca {
   width: 100%;
   height: 35px;
   border: none;
+  color: var(--text-color-llg);
 }
 
 .fa-magnifying-glass {
   padding-top: 7px;
   padding-left: 10px;
+  margin-right: 15px;
 }
 
 
@@ -156,16 +171,16 @@ span {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: white;
+  background: var(--bg-color-w);
 }
 
 .fa-bell-slash {
-  color: rgb(142, 218, 252);
+  color: var(--text-color-c);
   font-size: 1.2rem;
 }
 
 .special a {
-  color: rgb(81, 121, 138);
+  color: var(--text-color-bg);
   font-size: 12px;
   font-weight: bold;
 }
@@ -182,7 +197,7 @@ span {
 }
 
 .left .center span {
-  color: rgb(182, 185, 187);
+  color: var(--text-color-lg);
   font-size: 12px;
   font-weight: bold;
 }
@@ -203,7 +218,7 @@ span {
 .right span {
   font-size: 12px;
   font-weight: bold;
-  color: rgb(135, 141, 143);
+  color: var(--text-color-g);
 }
 
 .chat {
@@ -211,7 +226,7 @@ span {
 }
 
 .sms {
-  background-color: white;
+  background: var(--bg-color-w);
   width: 60%;
   height: 30%;
   border-radius: 20px;
@@ -220,7 +235,7 @@ span {
 }
 
 .sms.send {
-  background-color: rgb(213, 249, 186);
+  background: var(--bg-color-v);
   align-self: flex-end;
 }
 
@@ -231,19 +246,20 @@ span {
   margin-left: 40px;
 }
 
+
 /* menu info sms */
 
 .dropbtn{
-  color: white;
+  color: var(--text-color-w);
   border: none;
 }
 
 .sms.send .dropbtn {
-  background-color: rgb(213, 249, 186);
+  background: var(--bg-color-v);
 }
 
 .sms.receive .dropbtn {
-  background-color: white;
+  background: var(--bg-color-w);
 }
 
 .dropdown {
@@ -255,14 +271,14 @@ span {
   display: none;
   position: absolute;
   right: 2px;
-  background-color: #f1f1f1;
+  background: var(--bg-color-dropdown);
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
 .dropdown-content a {
-  color: black;
+  color: var(--text-color-b);
   padding: 10px 12px;
   text-decoration: none;
   display: block;
@@ -271,11 +287,11 @@ span {
 }
 
 .sms-dx .fa-chevron-down:hover {
-  color:rgb(72, 74, 74);
+  color: var(--text-color-gs);
 }
 
 .dropdown-content a:hover {
-  background-color: #ffff;
+  background: var(--bg-color-w);
 }
 
 .dropdown:hover .dropdown-content {
@@ -283,11 +299,11 @@ span {
 }
 
 .sms.send .dropdown:hover .dropbtn {
-  background-color: rgb(213, 249, 186);
+  background: var(--bg-color-v);
 }
 
 .sms.receive .dropdown:hover .dropbtn {
-  background-color: white;
+  background: var(--bg-color-w);
 }
 
 /* /menu info sms */
@@ -310,6 +326,7 @@ span {
   height: 50px;
   border: none;
   border-radius: 8px;
+  color: var(--text-color-g);
 }
 
 .sms .sms-orario {
@@ -326,6 +343,10 @@ span {
   right: .2px;
 }
 
+.fa-face-smile,
+.fa-microphone {
+  color: var(--text-color-gs);
+}
 
 .bottom i {
   width: 8%;
