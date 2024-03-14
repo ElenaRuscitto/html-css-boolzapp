@@ -17,7 +17,8 @@ createApp ({
         message: '',
         status: ''
       }
-              
+       
+      // nameToSearch: '',
     }
       
   },
@@ -54,5 +55,14 @@ createApp ({
   mounted () {
     console.log(contacts);
   },
+
+  computed: {
+
+    nameFiltrate() {
+    
+        return contacts.contact.filter(elementoMsg => elementoMsg.name.toLowerCase().includes(this.elementoMsg.toLowerCase()))
+  
+    }
+  }
 
 }).mount ('#app');
