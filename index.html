@@ -88,7 +88,9 @@
             <div class="sx d-flex d-center a-center padding" >
 
               <div class="">
-                <img :src="`${contact.avatar}`" :alt="contact.nome">
+                <img 
+                :src="contact.avatar" 
+                :alt="contact.nome">
               </div>
 
               <div class="prew margin-left">
@@ -120,9 +122,9 @@
 
           <!-- sx -->
           <div class="sx d-flex margin-left">
-            <img src="./img/avatar_1.jpg" alt="io">
+            <img :src="contacts[activeContact].avatar" :alt="contacts[activeContact].name">
             <div class="Michele a-center d-center margin-left">
-              <h5>Michele</h5>
+              <h5>{{ contacts[activeContact].name }}</h5>
               <span>Ultimo accesso oggi alle 16:26</span>
             </div>
 
@@ -195,7 +197,13 @@
           </div>
 
           <div class="srivi-mess d-flex d-center ">
-            <input type="text" placeholder=" Scrivi un messaggio" class="scrivi padding-left">
+            <input 
+            type="text" 
+            placeholder=" Scrivi un messaggio" 
+            class="scrivi padding-left"
+            v-model.trim="newMsg"
+            @keyup.enter="addMsg(), msgBot()" 
+            >
           </div>
 
           <div class="none">

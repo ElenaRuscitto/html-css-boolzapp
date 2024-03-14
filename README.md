@@ -27,7 +27,7 @@ Cancella messaggio: cliccando sul messaggio appare un menu a tendina che permett
 2. con v-for stampare dinamicamente messaggi contatto.
 3. @Click sul contatto mostra la conversazione del contatto cliccato
 4. Aggiunta di un messaggio:
- - @keypress.enter sul testo scritto per pubblicarlo (verde)
+ - @keyup.enter sul testo scritto per pubblicarlo (verde)
  5. Risposta dall’interlocutore:
-  - @keypress.enter sul testo scritto per pubblicarlo (bianco) con 'OK!'
+  - @keyup.enter sul testo scritto per pubblicarlo (bianco) con 'OK!'
  
