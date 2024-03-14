@@ -9,7 +9,9 @@ createApp ({
 
   data() {
     return {
-      contacts
+      contacts, 
+      activeContact: 0,
+      
     }
       
   },

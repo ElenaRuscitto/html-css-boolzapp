@@ -78,7 +78,12 @@
         <div class="center">
 
           <!-- 1 -->
-          <div class="single d-flex  a-center" v-for="contact in contacts">
+          <div 
+          class="single d-flex  a-center" 
+          v-for="(contact, id) in contacts"
+          @click="activeContact = id"
+          >
+
             <!-- sx -->
             <div class="sx d-flex d-center a-center padding" >
 
@@ -136,13 +141,17 @@
         <!-- centro -->
         <div class="center">
 
-          <div class="chat d-flex column">
+          <div 
+          class="chat d-flex column" 
+          v-for="elementoMsg in contacts[activeContact].messages"
+          >
 
-            <div class="sms send d-flex">
+            <div 
+            class="sms d-flex" 
+            :class="elementoMsg.status === 'sent' ? 'send' : ' receive' "
+            >
               <div class="sms-sx">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi cupiditate rem debitis porro inventore
-                quisquam fuga! Necessitatibus laboriosam sapiente quibusdam iure totam quisquam nisi, id sed eveniet,
-                reprehenderit illo at.
+                {{elementoMsg.message}}
               </div>
 
               <div class="sms-dx d-flex space-between column">
@@ -159,72 +168,24 @@
                 <!-- /chevron attiva -->
 
                 <div class="d-flex flex-end">
-                  <span class="sms-orario">16:13</span>
+                  <span class="sms-orario">{{elementoMsg.date}}</span>
                 </div>
 
               </div>
             </div>
 
 
-            <div class="sms receive d-flex">
-              <div class="sms-sx">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi cupiditate rem debitis porro inventore
-                quisquam fuga! Necessitatibus laboriosam sapiente quibusdam iure totam quisquam nisi, id sed eveniet,
-                reprehenderit illo at.
-              </div>
 
-              <div class="sms-dx d-flex space-between column">
-                <!-- chevron attiva -->
-                <div class="dropdown">
-                  <button class="dropbtn">
-                    <i class="fa-solid fa-chevron-down"></i>
-                  </button>
-                  <div class="dropdown-content">
-                    <a href="#">Info messaggio</a>
-                    <a href="#">Cancella messaggio</a>
-                  </div>
-                </div>
-                <!-- /chevron attiva -->
-
-                <div class="d-flex flex-end">
-                  <span class="sms-orario">16:15</span>
-                </div>
-
-              </div>
-            </div>
-
-            <div class="sms send d-flex">
-              <div class="sms-sx">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi cupiditate rem debitis porro inventore
-                quisquam fuga! Necessitatibus laboriosam sapiente quibusdam iure totam quisquam nisi, id sed eveniet,
-                reprehenderit illo at.
-              </div>
-
-              <div class="sms-dx d-flex space-between column">
-                <!-- chevron attiva -->
-                <div class="dropdown">
-                  <button class="dropbtn">
-                    <i class="fa-solid fa-chevron-down"></i>
-                  </button>
-                  <div class="dropdown-content">
-                    <a href="#">Info messaggio</a>
-                    <a href="#">Cancella messaggio</a>
-                  </div>
-                </div>
-                <!-- /chevron attiva -->
+  
 
 
-                <div class="d-flex flex-end">
-                  <span class="sms-orario">16:13</span>
-                </div>
 
-              </div>
-            </div>
 
+               
 
           </div>
-
         </div>
+
 
         <!-- sotto -->
         <div class="bottom d-flex space-between a-center padding-left padding-right ">
@@ -243,9 +204,13 @@
         </div>
 
       </div>
+
     </div>
 
+
+
   </div>
+  
 
 
 
