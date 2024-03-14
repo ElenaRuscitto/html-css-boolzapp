@@ -78,9 +78,9 @@
         <div class="center">
 
           <!-- 1 -->
-          <div class="single d-flex  a-center" >
+          <div class="single d-flex  a-center" v-for="contact in contacts">
             <!-- sx -->
-            <div class="sx d-flex d-center a-center padding" v-for="contact in contacts">
+            <div class="sx d-flex d-center a-center padding" >
 
               <div class="">
                 <img :src="`${contact.avatar}`" :alt="contact.nome">
@@ -88,7 +88,7 @@
 
               <div class="prew margin-left">
                 <h5>{{ contact.name }}</h5>
-                <span>{{ contact.messages.message }}</span>
+                <span>{{ contact.messages [contact.messages.length - 1 ].message}}</span>
               </div>
 
 
