@@ -253,6 +253,7 @@ img {
   display: flex;
   justify-content: flex-end;
   margin-left: 130px;
+  cursor: pointer;
 }
 
 
@@ -278,7 +279,7 @@ img {
 }
 
 .dropdown-content {
-  display: none;
+  /* display: none; */
   position: absolute;
   right: 2px;
   background: var(--bg-color-dropdown);
@@ -308,9 +309,10 @@ img {
   display: none;
 }
 
-.dropdown:hover .dropdown-content {
+/* levo l'Hover per visualizzare la tendina info e cancella messaggio */
+/* .dropdown:hover .dropdown-content {
   display: block;
-}
+} */
 
 .sms.sent .dropdown:hover .dropbtn {
   background: var(--bg-color-v);

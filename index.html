@@ -157,7 +157,7 @@
 
           <div 
           class="chat d-flex column" 
-          v-for="elementoMsg in contacts[activeContact].messages"
+          v-for="(elementoMsg,indice) in contacts[activeContact].messages"
           >
 
             <div 
@@ -172,14 +172,17 @@
                   <button class="dropbtn">
 
                     <i 
-                    class="fa-solid fa-chevron-down">
-                  </i>
+                    class="fa-solid fa-chevron-down"
+                    @click="isClicked(indice)">
+                    
+                    </i>
                   </button>
-                  <div class="dropdown-content">
+                  <div class="dropdown-content d-none">
                     <a href="#">Info messaggio</a>
                     <a 
                       href="#"
-                      @click="deleteMsg (indice)">Cancella messaggio</a>
+                      @click.stop="deleteMsg (indice);
+                      isClicked(indice)">Cancella messaggio</a>
                   </div>
                 </div>
                 <!-- /chevron attiva -->

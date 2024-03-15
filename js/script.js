@@ -25,6 +25,9 @@ createApp ({
       nameToSearch: '',
     
       dataOra: '',
+
+ 
+
     }
       
   },
@@ -32,7 +35,7 @@ createApp ({
   methods: {
 
     
-
+    // per scrivere un nuovo messaggio 
     addMsg() {
 
       this.printData();
@@ -53,6 +56,7 @@ createApp ({
       this.newMsg= ''
     },
 
+    // messaggio bot di risposta
     msgBot () {
 
       this.printData();
@@ -65,6 +69,7 @@ createApp ({
       this.contacts[this.activeContact].messages.push(this.newMsg)
     },
 
+    // per cancellare i messaggi con chevron
     deleteMsg (indice) {
       this.contacts[this.activeContact].messages.splice(indice, 1);
 
@@ -78,6 +83,11 @@ createApp ({
               .toFormat('dd/MM/yyyy      HH:mm:ss')
           return this.dataOra;
     },  
+
+    isClicked(indice) {
+      const infoMsg = document.querySelectorAll('.dropdown-content');
+      infoMsg[indice].classList.toggle('d-none')
+    }
 
     
 
