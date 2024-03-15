@@ -1,6 +1,10 @@
 
+
 // import {contacts} from "./db.js";
 import {contacts} from "./db.js";
+
+
+const {DateTime} = luxon;
 
 
 const {createApp} = Vue;
@@ -19,14 +23,22 @@ createApp ({
       },
        
       nameToSearch: '',
+    
+      dataOra: '',
     }
       
   },
 
   methods: {
+
+    
+
     addMsg() {
+
+      this.printData();
+
       this.obj={ 
-        date: '7/4/91',
+        date: this.dataOra,
         message: this.newMsg,
         status: 'sent' 
       };
@@ -43,17 +55,38 @@ createApp ({
 
     msgBot () {
 
+      this.printData();
+
       this.newMsg = {
-        date: '',
+        date: this.dataOra,
         message: 'Ok!',
         status: 'received',
       }
       this.contacts[this.activeContact].messages.push(this.newMsg)
-    }
+    },
+
+    deleteMsg (indice) {
+      this.contacts[this.activeContact].messages.splice(indice, 1);
+
+    },
+
+    // data
+    printData() {
+
+      this.dataOra = DateTime.now()
+              .setLocale('it')
+              .toFormat('dd/MM/yyyy      HH:mm:ss')
+          return this.dataOra;
+    },  
+
+    
+
   },
 
   mounted () {
     console.log(contacts);
+
+        
   },
 
   computed: {

@@ -25,6 +25,10 @@
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
 
+  <!-- LUXON -->
+  <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
+
+
 
 </head>
 
@@ -128,7 +132,9 @@
 
           <!-- sx -->
           <div class="sx d-flex margin-left">
-            <img :src="contacts[activeContact].avatar" :alt="contacts[activeContact].name">
+            <img 
+            :src="contacts[activeContact].avatar" 
+            :alt="contacts[activeContact].name">
             <div class="Michele a-center d-center margin-left">
               <h5>{{ contacts[activeContact].name }}</h5>
               <span>Ultimo accesso oggi alle 16:26</span>
@@ -158,19 +164,22 @@
             class="sms d-flex" 
             :class="elementoMsg.status"
             >
-              <div class="sms-sx">
-                {{elementoMsg.message}}
-              </div>
+              <div class="sms-sx"> {{elementoMsg.message}} </div>
 
               <div class="sms-dx d-flex space-between column">
                 <!-- chevron attiva -->
                 <div class="dropdown">
                   <button class="dropbtn">
-                    <i class="fa-solid fa-chevron-down"></i>
+
+                    <i 
+                    class="fa-solid fa-chevron-down">
+                  </i>
                   </button>
                   <div class="dropdown-content">
                     <a href="#">Info messaggio</a>
-                    <a href="#">Cancella messaggio</a>
+                    <a 
+                      href="#"
+                      @click="deleteMsg (indice)">Cancella messaggio</a>
                   </div>
                 </div>
                 <!-- /chevron attiva -->
@@ -204,11 +213,11 @@
 
           <div class="srivi-mess d-flex d-center ">
             <input 
-            type="text" 
-            placeholder=" Scrivi un messaggio" 
-            class="scrivi padding-left"
-            v-model.trim="newMsg"
-            @keyup.enter="addMsg(), msgBot()" 
+              type="text" 
+              placeholder=" Scrivi un messaggio" 
+              class="scrivi padding-left"
+              v-model.trim="newMsg"
+              @keyup.enter="addMsg(), msgBot()" 
             >
           </div>
 
