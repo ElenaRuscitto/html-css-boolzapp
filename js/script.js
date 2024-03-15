@@ -15,10 +15,10 @@ createApp ({
       obj: {
         date: '',
         message: '',
-        status: ''
-      }
+        status: '',
+      },
        
-      // nameToSearch: '',
+      nameToSearch: '',
     }
       
   },
@@ -29,7 +29,7 @@ createApp ({
         date: '7/4/91',
         message: this.newMsg,
         status: 'sent' 
-      }
+      };
       this.contacts[this.activeContact].messages.push(this.obj);
 
       this.obj={ 
@@ -37,7 +37,7 @@ createApp ({
         message: '',
         status: '',
        
-      }
+      };
       this.newMsg= ''
     },
 
@@ -58,11 +58,26 @@ createApp ({
 
   computed: {
 
+  
     nameFiltrate() {
-    
-        return contacts.contact.filter(elementoMsg => elementoMsg.name.toLowerCase().includes(this.elementoMsg.toLowerCase()))
+
+      contacts.forEach(contact => {
+        
+        if (contact.name.toLowerCase().includes(this.nameToSearch.toLowerCase())){
+         
+          contact.visible = true;
+         
+        } else {
+           contact.visible = false;
+        }
+        
+      })
+      return contacts
+      // return pizzeria.pizze.filter(pizza => pizza.nome_pizza.toLowerCase().includes(this.pizzaToSerach.toLowerCase()))
+
+      // return contacts.contact.filter(elementoMsg => elementoMsg.name.toLowerCase().includes(this.elementoMsg.toLowerCase()))
   
     }
-  }
+  },
 
 }).mount ('#app');

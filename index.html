@@ -73,6 +73,7 @@
             type="text" 
             placeholder="Cerca o inizia una nuova chat" class="cerca"
             v-model="nameToSearch"
+            @keyup="nameFiltrate"
             >
           </div>
 
@@ -84,7 +85,8 @@
           <!-- 1 -->
           <div 
           class="single d-flex  a-center" 
-          v-for="(contact, id) in contacts"
+          v-for="(contact, id) in nameFiltrate"
+          v-show="contact.visible"
           @click="activeContact = id"
           >
 
@@ -154,7 +156,7 @@
 
             <div 
             class="sms d-flex" 
-            :class="elementoMsg.status === 'sent' ? 'send' : ' receive' "
+            :class="elementoMsg.status"
             >
               <div class="sms-sx">
                 {{elementoMsg.message}}
@@ -180,7 +182,7 @@
               </div>
             </div>
 
-
+            
 
   
 
